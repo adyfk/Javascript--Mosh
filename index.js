@@ -1,14 +1,17 @@
-let name = "Adi"
-console.log(name)
+let person = {
+    name: 'Adi',
+    age: 18
+}
 
-//Cannot be a reserved keyword (if else dll)
-//Shoulbe meaningful
-//Cannot Start With Number
-//Cannot contain a space or hyphen (-)
+//Dot Notation 
+person.name = "Adi F"
+console.log(person)
 
-//Are Case-Sensitive
-let firstName = 'Adi', lastName;
+//Bracket Notation
+person['name'] = "Uhuy"
 
-const data;
+//Dynamic
+let selection = 'name'
 
-console.log(typeof name)
+person[selection] = "Adi F"
+console.log(person)
