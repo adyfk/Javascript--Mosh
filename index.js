@@ -1,5 +1,5 @@
-let arrayki = ['Adi', 'Fatk']
-arrayki[0] = "Tifa"
+function getName(params) {
+    console.log(params)
+}
 
-
-console.log(arrayki.length)
+getName('Adi')
