@@ -1,17 +1,5 @@
-let person = {
-    name: 'Adi',
-    age: 18
-}
+let arrayki = ['Adi', 'Fatk']
+arrayki[0] = "Tifa"
 
-//Dot Notation 
-person.name = "Adi F"
-console.log(person)
 
-//Bracket Notation
-person['name'] = "Uhuy"
-
-//Dynamic
-let selection = 'name'
-
-person[selection] = "Adi F"
-console.log(person)
+console.log(arrayki.length)
