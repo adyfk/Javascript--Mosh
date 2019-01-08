@@ -11,4 +11,4 @@ let firstName = 'Adi', lastName;
 
 const data;
 
-
+console.log(typeof name)
