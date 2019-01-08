@@ -1,22 +1,15 @@
-let x = 5, y = 2
+//For In
+const person = {
+    name: 'Adi',
+    age: 20
+}
+for (let key in person) {
+    console.log(key)
+    console.log(person[key])
+}
 
-console.log(x + y)
-console.log(x - y)
-console.log(x % y)
-console.log(x / y)
-console.log(x * y)
-console.log(x ** 3)     //exponent (Pangkat)
-
-//increment (inverse)
-
-
-// Ternary Operator
-let x = 10 > 2 ? 'yes' : 'No'
-
-
-//Logic with Non Bolean
-
-console.log(false || 'Adi')
-//Adi
-
+const colors = ['red', 'green', 'blue']
+//For Of
+for (let key of colors)
+    console.log(key)
 
