@@ -9,5 +9,6 @@ console.log(name)
 //Are Case-Sensitive
 let firstName = 'Adi', lastName;
 
+const data;
 
 
