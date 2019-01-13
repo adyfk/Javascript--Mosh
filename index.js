@@ -1,10 +1,10 @@
-const numbers = [-1, 2, -1, 3, 4]
+const numbers = arrayFromRange(-10, -4)
 
-let sum = 0
-for (let n of numbers)
-    sum += n
-console.log(sum)
+console.log(numbers)
 
-sum = numbers.reduce((accumulator, currentvalue) => accumulator + currentvalue)   //optional params last for initial value of accumulator 
-
-console.log(sum)
+function arrayFromRange(min, max) {
+    const output = []
+    for (let i = min; i <= max; i++)
+        output.push(i)
+    return output
+}
