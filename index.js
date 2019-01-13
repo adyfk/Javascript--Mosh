@@ -1,13 +1,14 @@
-const numbers = [1, 2, 3, 4, 5, 1, 1]
+const numbers = [1, 2, 3, 4, 1, 1, 7]
 
-const output = move(numbers, 0, 3)
+const count = countOccurences(numbers, 1)
 
-console.log(output)
+console.log(count)
 
-function move(array, index, offset) {
-    const output = [...array]
-    const element = output.splice(index, 1)[0]
-    output.splice(index + offset, 0, element)
-    return output
+function countOccurences(array, searchElement) {
+    return array.reduce((accumulator, current) => {
+        const sum = current === searchElement ? 1 : 0
+        return sum + accumulator
+    })
 }
+
 
