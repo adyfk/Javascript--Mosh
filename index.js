@@ -1,22 +1,8 @@
-const circle = {
-    radius: 1,
-    draw() {
-        console.log('draw')
-    }
-}
+const data = 'Adi'
+const message = 'This is My\n\'first\' Message ' + data
+console.log(message)
 
-// const another = {}
-// for (let key in circle)
-//     another[key] = circle[key]
-
-//OR
-
-//const another = Object.assign({}, circle)
-// const another = Object.assign({
-//     color: 'yellow'
-// }, circle)
-
-//OR
-
-const another = { ...circle }
+const another =
+    `This is My ${4 + 2}
+'First' Text Lo ${data}`
 console.log(another)
