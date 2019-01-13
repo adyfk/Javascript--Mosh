@@ -5,13 +5,18 @@ const circle = {
     }
 }
 
-for (let key in circle)
-    console.log(key, circle[key])
+// const another = {}
+// for (let key in circle)
+//     another[key] = circle[key]
 
-for (let key of Object.keys(circle))
-    console.log(key)
+//OR
 
-for (entry of Object.entries(circle))
-    console.log(entry)
+//const another = Object.assign({}, circle)
+// const another = Object.assign({
+//     color: 'yellow'
+// }, circle)
 
-if ('radius' in circle) console.log('yes')
+//OR
+
+const another = { ...circle }
+console.log(another)
