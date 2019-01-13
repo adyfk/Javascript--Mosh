@@ -1,11 +1,17 @@
 const circle = {
     radius: 1,
+    draw() {
+        console.log('draw')
+    }
 }
-circle.color = 'Yellow'
-circle.draw = function () { }
 
-console.log(circle)
+for (let key in circle)
+    console.log(key, circle[key])
 
-delete circle.color
+for (let key of Object.keys(circle))
+    console.log(key)
 
-console.log(circle)
+for (entry of Object.entries(circle))
+    console.log(entry)
+
+if ('radius' in circle) console.log('yes')
