@@ -3,8 +3,12 @@ const numbers = [3, 4, 5]
 numbers.push(7, 8, 9)
 //Add Begining
 numbers.unshift(-1, 0, 1)
-//replace and delete
-numbers.splice(2, 1, 'a', 'b')
+//remove and and add in the middle
+numbers.splice(2, 1, 'a', 'b') //(index of elemet,many delete)
+//Remove Last Element
+numbers.pop()
+//Remove In the Beginning
+numbers.shift()
 console.log(numbers)
 
 const nomer = [1, 2, 3, 4, 5, 6, 1, 7]
@@ -24,6 +28,7 @@ const cek = course.find(function (element) {
     return element.name === 'a'
 })
 
+//check element
 console.log('Cek', cek)
 //Return 0 if Exist
 const cik = course.findIndex(function (element) {
@@ -31,3 +36,4 @@ const cik = course.findIndex(function (element) {
 })
 
 console.log('Cek', cik)
+
