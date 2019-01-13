@@ -1,14 +1,14 @@
-const numbers = [1, 2, 3, 4, 1, 1, 7]
+const movies = [
+    { title: 'a', year: 2018, rating: 4.5 },
+    { title: 'b', year: 2018, rating: 5 },
+    { title: 'c', year: 2018, rating: 5 },
+    { title: 'd', year: 2019, rating: 4.6 },
+]
 
-const count = countOccurences(numbers, 1)
+const title = movies
+    .filter(m => m.year === 2018 && m.rating >= 4.5)
+    .sort((a, b) => a.rating - b.rating)
+    .reverse()
+    .map(m => m.title)
 
-console.log(count)
-
-function countOccurences(array, searchElement) {
-    return array.reduce((accumulator, current) => {
-        const sum = current === searchElement ? 1 : 0
-        return sum + accumulator
-    })
-}
-
-
+console.log(title)
