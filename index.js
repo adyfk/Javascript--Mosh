@@ -1,10 +1,14 @@
-const numbers = arrayFromRange(-10, -4)
+const numbers = [1, 2, 3, 4, 5, 1, 1]
 
-console.log(numbers)
+const output = except(numbers, [1, 2])
 
-function arrayFromRange(min, max) {
+console.log(output)
+
+function except(array, excluded) {
     const output = []
-    for (let i = min; i <= max; i++)
-        output.push(i)
+    for (let element of array)
+        if (!excluded.includes(element))
+            output.push(element)
     return output
 }
+
