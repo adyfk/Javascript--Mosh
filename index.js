@@ -1,15 +1,24 @@
-//For In
-const person = {
-    name: 'Adi',
-    age: 20
+const circle = {
+    radius: 1,
+    location: {
+        x: 1,
+        y: 1
+    },
+    isVisible: true,
+    draw: function () {
+        console.log('draw')
+    }
 }
-for (let key in person) {
-    console.log(key)
-    console.log(person[key])
+//Factory FUnction
+function createCircle(radius) {
+    return {
+        radius,
+        draw() {
+            console.log('draw')
+        }
+    }
 }
-
-const colors = ['red', 'green', 'blue']
-//For Of
-for (let key of colors)
-    console.log(key)
-
+const circle1 = createCircle(1)
+console.log(circle1)
+const circle2 = createCircle(2)
+console.log(circle2)
