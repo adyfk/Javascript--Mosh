@@ -1,16 +1,21 @@
 const person = {
     firstName: 'Adi',
     lastname: 'Fatkhurozi',
-    get fullName() {
-        return `${this.firstName} ${this.lastname}`
-    },
     set fullName(value) {
+        if (typeof value !== 'string')
+            throw new Error('Value is not a String.')
         const parts = value.split(' ')
+        if (parts.length !== 2)
+            throw new Error('Enter the firstname and Last Name')
         this.firstName = parts[0]
         this.lastname = parts[1]
     }
 }
-person.fullName = "Haerani Lathifah"
+try {
+    person.fullName = ''
+} catch (e) {
+    console.log(e)
+}
 //getters => access properties get
 //setters => change (mutate) them
 console.log(person.fullName)
