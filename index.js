@@ -1,38 +1,16 @@
-//Function Declaration
-function walk() {
-    console.log('run')
+const person = {
+    firstName: 'Adi',
+    lastname: 'Fatkhurozi',
+    get fullName() {
+        return `${this.firstName} ${this.lastname}`
+    },
+    set fullName(value) {
+        const parts = value.split(' ')
+        this.firstName = parts[0]
+        this.lastname = parts[1]
+    }
 }
-
-//Function Expression
-let run = function () {
-    console.log('run')
-}
-
-//argument
-function sum() {
-    console.log(arguments)
-    let total = 0
-    for (let value of arguments)
-        total += value
-    return total
-}
-console.log(sum(5, 4, 3, 2))
-
-// The Best Operator
-function sum2(...args) {
-    return args.reduce((a, b) => a + b)
-}
-console.log(sum2(5, 4, 3, 2))
-
-// The Best Operator
-function sum3(discount, ...args) {
-    const total = args.reduce((a, b) => a + b)
-    return total * (1 - discount)
-}
-console.log('Discount', sum3(0.1, 20, 30))
-
-//Default Paramter
-function interest(principal, rate = 3.5, years = 5) {
-    return principal * rate / 100 * years
-}
-console.log('Interest', interest(10000, undefined, 3))
+person.fullName = "Haerani Lathifah"
+//getters => access properties get
+//setters => change (mutate) them
+console.log(person.fullName)
